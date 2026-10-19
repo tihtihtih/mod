@@ -1,0 +1,31 @@
+{
+	"geode": "4.6.0",
+	"gd": {
+		"win": "2.2074"
+	},
+	"version": "v1.0.0",
+	"id": "tih.click-window-macro",
+	"name": "Click Window Macro",
+	"developer": "Tih",
+	"description": "Record a macro of a level, then replay it only when you click within a few frames of each recorded click.",
+	"settings": {
+		"mode": {
+			"type": "string",
+			"name": "Mode",
+			"description": "Off: nothing happens. Record: records your clicks, saved when you complete the level. Replay: the macro only clicks when you click within the window of a recorded click.",
+			"default": "Off",
+			"one-of": ["Off", "Record", "Replay"]
+		},
+		"window": {
+			"type": "int",
+			"name": "Click window (steps)",
+			"description": "How many physics steps early or late your click can be and still trigger the macro's click.",
+			"default": 2,
+			"min": 0,
+			"max": 20,
+			"control": {
+				"slider": true
+			}
+		}
+	}
+}
