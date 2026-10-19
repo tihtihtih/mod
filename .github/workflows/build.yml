@@ -19,10 +19,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Build the mod
-        uses: geode-sdk/build-geode-mod@main
-        with:
-          combine: true
+     - name: Build the mod
+           uses: geode-sdk/build-geode-mod@main
+           with:
+             combine: true
+             sdk: nightly
 
   package:
     name: Package builds
